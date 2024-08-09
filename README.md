@@ -18,3 +18,5 @@ Proyecto: Web sobre mi Perfil Profesional
 ![Accesibilidad Web](./img/AccesibleWebLab02.jpg)
 
 ### Reflexiones y Comentarios
+* Revisar logros adicionales
+* Requiere más tiempo codificar e implementar logros adiconales.

@@ -25,25 +25,25 @@ if (respuesta1.toLowerCase() === pregunta1.toLowerCase()) {
 
 const pregunta2 = prompt("¿Trabajo actualmente?, Si / No?");
 if (respuesta2.toLowerCase() === pregunta2.toLowerCase()) {
-    alert("Respuesta Correcta")
+    alert("Respuesta Correcta, muy bien ")
     puntos += 1;
 } else { alert("Respuesta Incorrecta") }
 
 const pregunta3 = prompt("¿Nací en Ayacuho?, Si / No");
 if (respuesta3.toLowerCase() === pregunta3.toLowerCase()) {
-    alert("Respuesta Correcta")
+    alert("Respuesta Correcta, eres intuitivo")
     puntos += 1;
 } else { alert("Respuesta Incorrecta") }
 
 const pregunta4 = prompt("¿Inicié a estudiar Ingeniería, en Lima?, Si / No");
 if (respuesta4.toLowerCase() === pregunta4.toLowerCase()) {
-    alert("Respuesta correcta")
+    alert("Respuesta correcta, no pense que adivinarías")
     puntos += 1;
 } else { alert("Respuesta Incorrecta") }
 
 const pregunta5 = prompt("¿Tengo el titulo de la Maestría?, Si / No");
 if (respuesta5.toLowerCase() === pregunta5.toLowerCase()) {
-    alert("Respuesta correcta")
+    alert("Respuesta correcta, muy bien")
     puntos += 1;
 } else { alert("Respuesta Incorrecta") }
 console.log(usuario+"tiene"+puntos);
