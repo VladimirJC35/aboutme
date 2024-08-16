@@ -1,10 +1,10 @@
 //'use strict';
-const respuesta1 = "No";
-const respuesta2 = "Si";
-const respuesta3 = "Si";
-const respuesta4 = "No";
-const respuesta5 = "No";
-
+//const respuesta1 = "No";
+//const respuesta2 = "Si";
+//const respuesta3 = "Si";
+//const respuesta4 = "No";
+//const respuesta5 = "No";
+/*
 const numeroMaxIntentos = 4;
 const numeroAAdivinar = 15;
 let contadorDeIntentos = 1;
@@ -90,4 +90,61 @@ for(let i=1; i<=numMaxIntento;i++) {
        
  
 }
+alert (usuario+" Gracias por participar. Ud. tiene un Total de :  "+ puntos+"  Repuestas correctas");
+*/
+
+let usuario = prompt("Hola; ¿ Cual es tu nombre/apodo ?");
+alert('Bienvenido, mucho gusto ' + usuario);
+console.log(usuario);
+puntos = 0;
+
+function preguntaSegundoNombre() {
+    const respuesta1 = "No";
+    const pregunta1 = prompt('Tengo un segundo nombre? Si o No?');
+    if (respuesta1.toLowerCase() == pregunta1.toLowerCase()) {
+        alert('Correcto');
+        puntos++;
+    } else {
+        alert('Incorrecto');
+    }
+}
+
+function preguntaTrabajoActualmente() {
+    const respuesta2 = "Si";
+    const pregunta2 = prompt('Trabajo actualmente? Si o No?');
+    if (respuesta2.toLowerCase() == pregunta2.toLowerCase()) {
+        alert('Correcto');
+        puntos++;
+    } else {
+        alert('Incorrecto');
+    }
+}
+
+function preguntaLugardeNacimiento() {
+    const respuesta3 = "Si";
+    const pregunta3 = prompt('Naci en Ayacucho? Si o No?');
+    if (respuesta3.toLowerCase() == pregunta3.toLowerCase()) {
+        alert('Correcto');
+        puntos++;
+    } else {
+        alert('Incorrecto');
+    }
+}
+
+function preguntaIniciodeEstudios() {
+    const respuesta4 = "No";
+    const pregunta4 = prompt('Inicie a estudiar Ingenieria en Lima? Si o No?');
+    if (respuesta4.toLowerCase() == pregunta4.toLowerCase()) {
+        alert('Correcto');
+        puntos++;
+    } else {
+        alert('Incorrecto');
+    }
+}
+
+preguntaSegundoNombre();
+preguntaTrabajoActualmente();
+preguntaLugardeNacimiento();
+preguntaIniciodeEstudios();
+
 alert (usuario+" Gracias por participar. Ud. tiene un Total de :  "+ puntos+"  Repuestas correctas");
