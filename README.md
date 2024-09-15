@@ -23,8 +23,9 @@ Proyecto: Web sobre mi Perfil Profesional
 * Presentación de página web personal y 10 lugares interesantes
 * Pregunta 06 adivinar un número con sólo 04 intentos
 * Pregunta 07 adivinar color de una matriz con sólo 06 intentos
+* Se muestra el puntaje obtenido del total de respuestas acertadas
 * Evaluación final de accesibilidad es 91%
-![Accesibilidad Web](./img/AccesibleWebLab02.jpg)
+![Accesibilidad Web](./img/AccesibleWebLab03.jpg)
 
 ### Reflexiones y Comentarios
 * Revisar logros adicionales

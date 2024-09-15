@@ -93,6 +93,10 @@ for(let i=1; i<=numMaxIntento;i++) {
 alert (usuario+" Gracias por participar. Ud. tiene un Total de :  "+ puntos+"  Repuestas correctas");
 */
 
+
+const colorfavorito = ["Azul Marino", "Verde", "Turquesa","Morado"];
+const numMaxIntento = 6;
+
 let usuario = prompt("Hola; ¿ Cual es tu nombre/apodo ?");
 alert('Bienvenido, mucho gusto ' + usuario);
 console.log(usuario);
@@ -142,9 +146,91 @@ function preguntaIniciodeEstudios() {
     }
 }
 
+function preguntaMaestria() {
+    const respuesta5 = "No"
+    const pregunta5 = prompt("¿Tengo el titulo de la Maestría?, Si / No");
+    if (respuesta5.toLowerCase() === pregunta5.toLowerCase()) {
+        alert("Respuesta correcta, muy bien")
+        puntos += 1;
+    } else { alert("Respuesta Incorrecta") }
+}
+
+function preguntaExperiencia() {
+    const numeroMaxIntentos = 4;
+    const numeroAAdivinar = 15;
+    let contadorDeIntentos = 1;
+    while (contadorDeIntentos <= numeroMaxIntentos) {
+        const numeroPorUsuario = Number(prompt("¿Cuantos años de experiencia tengo como Analista de S.I ?, ingresa Números: "+numeroMaxIntentos+" intentos"));
+    
+        if (numeroPorUsuario === numeroAAdivinar) {
+            alert("Felicidades!!! adivinaste amigo(a) tengo " + numeroAAdivinar+"años de experiencia")
+            alert("Lo hiciste en " + contadorDeIntentos + " intentos");
+            puntos += 1;
+            break;
+        } if (numeroPorUsuario > numeroAAdivinar) {
+            alert(numeroPorUsuario + "  Estimación demasiado alta ");
+        } else {
+            alert(numeroPorUsuario + "  Estimación demasiado baja ")
+    
+        }
+        contadorDeIntentos++;
+        if (contadorDeIntentos === numeroMaxIntentos + 1) {
+            alert("Llegaste al número max de intentos :(, Mi experiencia es de: "+numeroAAdivinar);
+        }
+    }
+    
+}
+
+/*function preguntaColorFavorito() {
+    const colorFavorito = ["Azul Marino", "Verde", "Turquesa", "Morado"];
+    const numMaxIntento = 6;
+    let coloringresado = prompt ("Adivina mi color favorito...!,Tienes " +numMaxIntento + " intentos..")
+    for(let i=1; i<=numMaxIntento;i++) {
+        for (let j=0; j< colorfavorito.length; j++) {
+            if(coloringresado.toUpperCase() == colorfavorito[j].toUpperCase() ) {
+             alert ("Acertaste !!! Felicitaciones!!");
+             contadorDeIntentos++;
+             puntos += 1;
+             break;
+            }
+            else{
+                coloringresado = prompt("No acertaste..! Sigue intentando te quedan " + (numMaxIntento-i) + " intentos. El color es:");
+            }
+        } if (i==numMaxIntento) {
+            alert ("Mis colores Favoritos son: "+ colorfavorito +" Éxitos en tu opróximo intento ...!");
+        }         
+    }
+}*/
+function preguntaColorFavorito() {
+    const colorFavorito = ["Azul Marino", "Verde", "Turquesa", "Morado"];
+    const numMaxIntento = 6;
+    let intentosRestantes = numMaxIntento;
+
+    // Primer intento
+    let coloringresado = prompt("Adivina mi color favorito... ¡Tienes " + intentosRestantes + " intentos!");
+
+    for (let i = 1; i <= numMaxIntento; i++) {
+        // Verifica si el color ingresado está en la lista de colores favoritos
+        if (colorFavorito.map(color => color.toLowerCase()).includes(coloringresado.toLowerCase())) {
+            alert("¡Acertaste! Felicitaciones, el color era " + coloringresado + ".");
+            puntos += 1;  // Si tienes un contador de puntos
+            break;
+        } else if (i < numMaxIntento) {
+            // Restan intentos, pero no es el último intento
+            intentosRestantes--;
+            coloringresado = prompt("No acertaste. Te quedan " + intentosRestantes + " intentos. Vuelve a intentarlo:");
+        } else {
+            // Último intento fallido
+            alert("Lo siento, has agotado tus intentos. Mis colores favoritos son: " + colorFavorito.join(", ") + ".");
+        }
+    }
+}
+
 preguntaSegundoNombre();
 preguntaTrabajoActualmente();
 preguntaLugardeNacimiento();
 preguntaIniciodeEstudios();
-
+preguntaMaestria();
+preguntaExperiencia();
+preguntaColorFavorito();
 alert (usuario+" Gracias por participar. Ud. tiene un Total de :  "+ puntos+"  Repuestas correctas");
